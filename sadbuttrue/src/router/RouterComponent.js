@@ -1,14 +1,20 @@
-import React, {PureComponent} from "react";
-import {Scene, Router, Lightbox} from 'react-native-router-flux';
+import React, {PureComponent} from 'react';
+import {Scene, Router, Lightbox, Tabs, Stack} from 'react-native-router-flux';
 // import * as scenes from './_routerScenes';
 // import Config from "../../Config";
-import MainScreen from "../screens/MainScreen";
+import MainScreen from '../screens/MainScreen';
+import MyFinancePlanScreen from '../screens/MyFinancePlanScreen';
+import ChangeAccountPopup from '../components/ChangeAccountPopup';
+import Styles from '../Styles';
+import Tab from '../components/Tab';
+
 
 class RouterComponent extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
             loading: true,
+            bottomModal: false,
         };
     }
 
@@ -31,7 +37,7 @@ class RouterComponent extends PureComponent {
             title={item.title}
             renderLeftButton={() => item.leftBtn}
             renderRightButton={() => item.rightBtn}
-            titleStyle={{textAlign: 'center', alignSelf: 'center', flex: 1,}}
+            titleStyle={{textAlign: 'center', alignSelf: 'center', flex: 1}}
         />
     );
 
@@ -39,20 +45,31 @@ class RouterComponent extends PureComponent {
     render() {
         return (
             <Router>
-                <Lightbox>
-                    <Scene key="root">
-                        <Scene
-                            key="mainScreen"
-                            on={this.launchApp}
-                            component={MainScreen}
-                            title="mainScreen"
-                            titleStyle={{textAlign: 'center', alignSelf: 'center', flex: 1,}}
-                            initial
-                        />
-                    </Scene>
-                </Lightbox>
+                <Tabs tabBarStyle={Styles.tabBarStyle} showLabel={false}>
+                    <Scene
+                        key="mainScreen"
+                        icon={Tab}
+                        iconName
+                        on={this.launchApp}
+                        component={MainScreen}
+                        image={'💸'}
+                        title="sponps"
+                        titleStyle={{textAlign: 'center', alignSelf: 'center', flex: 1}}
+                        initial
+                    />
+                    <Scene
+                        key="myFinancePlanScreen"
+                        icon={Tab}
+                        on={this.launchApp}
+                        component={MyFinancePlanScreen}
+                        image={'📖'}
+                        title="planps"
+                        titleStyle={{textAlign: 'center', alignSelf: 'center', flex: 1}}
+                        initial
+                    />
+                </Tabs>
             </Router>
-        )
+        );
     }
 }
 

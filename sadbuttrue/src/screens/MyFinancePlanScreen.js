@@ -3,7 +3,7 @@ import {ScrollView} from 'react-native';
 import RoundedComponent from '../components/RoundedComponent';
 import ChangeAccountPopup from '../components/ChangeAccountPopup';
 
-export class MainScreen extends Component {
+export class MyFinancePlanScreen extends Component {
 
     constructor(props) {
         super(props);
@@ -21,11 +21,12 @@ export class MainScreen extends Component {
         this.setState({showPopup: false})
     }
 
+
     render() {
         return (
             <ScrollView>
                 <RoundedComponent
-                    description={'heeeeeeeee1234555678'}
+                    description={'MyFinancePlanScreen'}
                 />
                 <ChangeAccountPopup
                     onPress={this.openPopup.bind(this)}
@@ -37,4 +38,4 @@ export class MainScreen extends Component {
     }
 }
 
-export default MainScreen;
+export default MyFinancePlanScreen;
