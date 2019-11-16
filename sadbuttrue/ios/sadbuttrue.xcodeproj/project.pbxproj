@@ -18,6 +18,8 @@
 		2DCD954D1E0B4F2C00145EB5 /* sadbuttrueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* sadbuttrueTests.m */; };
 		3BFC63198CD47FB7147D6467 /* libPods-sadbuttrue.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BB5D94F0C18B17E0313117E /* libPods-sadbuttrue.a */; };
 		4B2444AA52A5ECDB160FFF32 /* libPods-sadbuttrue-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66ED7882CF41707D8B802C0A /* libPods-sadbuttrue-tvOS.a */; };
+		82F18DB223801ED0009498E7 /* EuclidFlex-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 82F18DB023801ED0009498E7 /* EuclidFlex-Medium.otf */; };
+		82F18DB323801ED0009498E7 /* EuclidFlex-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 82F18DB123801ED0009498E7 /* EuclidFlex-Bold.otf */; };
 		EE378506841B20D7DB8F90D9 /* libPods-sadbuttrueTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A5E321B333D534E705B19D /* libPods-sadbuttrueTests.a */; };
 		FDB8BB685A9C7DE46CBF1E2F /* libPods-sadbuttrue-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A99950BB3A9BF9FE73913896 /* libPods-sadbuttrue-tvOSTests.a */; };
 /* End PBXBuildFile section */
@@ -60,6 +62,8 @@
 		57A5E321B333D534E705B19D /* libPods-sadbuttrueTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sadbuttrueTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66ED7882CF41707D8B802C0A /* libPods-sadbuttrue-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sadbuttrue-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EB5A22312EF321A1E78F1A4 /* Pods-sadbuttrue-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sadbuttrue-tvOS.release.xcconfig"; path = "Target Support Files/Pods-sadbuttrue-tvOS/Pods-sadbuttrue-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		82F18DB023801ED0009498E7 /* EuclidFlex-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "EuclidFlex-Medium.otf"; path = "../../../../../Downloads/swisstypefaces-64a0724c-f71d-11e9-b74d-060c4400029e 2/Euclid cuts/desktop files/EuclidFlex-Medium.otf"; sourceTree = "<group>"; };
+		82F18DB123801ED0009498E7 /* EuclidFlex-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "EuclidFlex-Bold.otf"; path = "../../../../../Downloads/swisstypefaces-64a0724c-f71d-11e9-b74d-060c4400029e 2/Euclid cuts/desktop files/EuclidFlex-Bold.otf"; sourceTree = "<group>"; };
 		A046B10541CA5877EA4E1A8D /* Pods-sadbuttrue-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sadbuttrue-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-sadbuttrue-tvOS/Pods-sadbuttrue-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		A2AC5C2B5BC884AEA340DAAB /* Pods-sadbuttrue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sadbuttrue.release.xcconfig"; path = "Target Support Files/Pods-sadbuttrue/Pods-sadbuttrue.release.xcconfig"; sourceTree = "<group>"; };
 		A99950BB3A9BF9FE73913896 /* libPods-sadbuttrue-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sadbuttrue-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +129,7 @@
 		13B07FAE1A68108700A75B9A /* sadbuttrue */ = {
 			isa = PBXGroup;
 			children = (
+				82F18DAF23801E77009498E7 /* fonts */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -161,8 +166,16 @@
 				0FD0964CFBBB0F4DE4C51E52 /* Pods-sadbuttrueTests.debug.xcconfig */,
 				CE0FA86078D4ED88B525A934 /* Pods-sadbuttrueTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		82F18DAF23801E77009498E7 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				82F18DB123801ED0009498E7 /* EuclidFlex-Bold.otf */,
+				82F18DB023801ED0009498E7 /* EuclidFlex-Medium.otf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -308,6 +321,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -337,7 +351,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				82F18DB323801ED0009498E7 /* EuclidFlex-Bold.otf in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				82F18DB223801ED0009498E7 /* EuclidFlex-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
