@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {ScrollView} from 'react-native';
 import RoundedComponent from '../components/RoundedComponent';
 import ChangeAccountPopup from '../components/ChangeAccountPopup';
+import Styles from '../Styles';
 
 export class MyFinancePlanScreen extends Component {
 
@@ -24,7 +25,7 @@ export class MyFinancePlanScreen extends Component {
 
     render() {
         return (
-            <ScrollView>
+            <ScrollView style={Styles.scrollView}>
                 <RoundedComponent
                     description={'MyFinancePlanScreen'}
                 />

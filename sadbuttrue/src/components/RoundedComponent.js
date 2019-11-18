@@ -2,38 +2,36 @@ import React from 'react';
 import {Text, View} from 'react-native';
 import PropTypes from 'prop-types';
 // import {Actions} from 'react-native-router-flux';
-import styled from 'styled-components/native/dist/styled-components.native.esm';
+import styled from 'styled-components';
+import Styles from '../Styles';
 
-const RoundedView = styled.View`
-    backgroundColor: white;
-    height: 200;
-    marginLeft: 20;
-    marginRight: 20;
-    marginTop: 30;
-    marginBottom: 30;
-    borderRadius: 20;
-`;
-
-const TextView = styled.Text`
-    marginTop: 10;
-    marginRight: 10;
-    marginLeft: 10;
-    font-weight: bold;
-	font-size: 20;
-	font-family: EuclidFlex-Bold;
-`;
-
-const RoundedComponent = ({description}) => {
+const RoundedComponent = ({description, additionalComponent, additionalDescription, descriptionSmall, additionalDescriptionSmall, additionalComponentSmall}) => {
 
     return (
-        <RoundedView>
-            <TextView>{description}</TextView>
-        </RoundedView>
+        <>
+            <View style={Styles.roundedView}>
+                <Text style={Styles.textView}>{description}</Text>
+                {additionalDescription && <Text style={Styles.smallText}>{additionalDescription}</Text>}
+                {additionalComponent && <View style={Styles.componentView}>{additionalComponent}</View>}
+            </View>
+            {descriptionSmall &&
+            <View style={Styles.roundedViewSmall}>
+                <Text style={Styles.textView}>{descriptionSmall}</Text>
+                {additionalDescriptionSmall && <Text style={Styles.smallText}>{additionalDescriptionSmall}</Text>}
+                {additionalComponentSmall && <View style={Styles.componentView}>{additionalComponentSmall}</View>}
+            </View>
+            }
+        </>
     );
 };
 
 RoundedComponent.propTypes = {
     description: PropTypes.string,
+    additionalComponent: PropTypes.shape({}),
+    additionalDescription: PropTypes.string,
+    descriptionSmall: PropTypes.string,
+    additionalDescriptionSmall: PropTypes.string,
+    additionalComponentSmall: PropTypes.shape({}),
 };
 
 export default RoundedComponent;

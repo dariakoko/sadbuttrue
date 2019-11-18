@@ -12,12 +12,17 @@
   "dependencies": {
     "prop-types": "^15.7.2",
     "react": "16.9.0",
-    "react-native": "0.61.4",
+    "react-native": "^0.61.4",
+    "react-native-chart-kit": "^3.11.0",
+    "react-native-chartjs": "^1.0.3",
     "react-native-elements": "^1.2.7",
     "react-native-modals": "^0.19.9",
     "react-native-router-flux": "^4.0.6",
+    "react-native-svg": "^9.13.3",
     "react-native-vector-icons": "^6.6.0",
-    "styled-components": "^4.4.1"
+    "react-native-webview": "^7.5.1",
+    "styled-components": "^4.4.1",
+    "svg": "^0.1.0"
   },
   "devDependencies": {
     "@babel/core": "7.7.2",

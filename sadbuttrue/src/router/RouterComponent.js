@@ -1,12 +1,9 @@
 import React, {PureComponent} from 'react';
-import {Scene, Router, Lightbox, Tabs, Stack} from 'react-native-router-flux';
-// import * as scenes from './_routerScenes';
-// import Config from "../../Config";
+import {Scene, Router, Tabs} from 'react-native-router-flux';
 import MainScreen from '../screens/MainScreen';
 import MyFinancePlanScreen from '../screens/MyFinancePlanScreen';
-import ChangeAccountPopup from '../components/ChangeAccountPopup';
-import Styles from '../Styles';
 import Tab from '../components/Tab';
+import Styles from '../Styles';
 
 
 class RouterComponent extends PureComponent {
@@ -50,22 +47,19 @@ class RouterComponent extends PureComponent {
                         key="mainScreen"
                         icon={Tab}
                         iconName
-                        on={this.launchApp}
                         component={MainScreen}
                         image={'💸'}
                         title="sponps"
-                        titleStyle={{textAlign: 'center', alignSelf: 'center', flex: 1}}
+                        titleStyle={Styles.footerText}
                         initial
                     />
                     <Scene
                         key="myFinancePlanScreen"
                         icon={Tab}
-                        on={this.launchApp}
                         component={MyFinancePlanScreen}
                         image={'📖'}
                         title="planps"
-                        titleStyle={{textAlign: 'center', alignSelf: 'center', flex: 1}}
-                        initial
+                        titleStyle={Styles.footerText}
                     />
                 </Tabs>
             </Router>
